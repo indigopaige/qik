@@ -21,7 +21,7 @@ rec {
                   in ghcp.developPackage
                     { modifier = drv:
                         pkgs.haskell.lib.addExtraLibraries
-                          (pkgs.haskell.lib.addBuildTools drv t) l
+                          (pkgs.haskell.lib.addBuildTools drv t) l;
                       source-overrides = sourceOverrides;
                       inherit name root;
                     };
